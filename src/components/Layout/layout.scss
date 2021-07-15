@@ -1,0 +1,14 @@
+@import "../../styles/variables";
+
+.layout__main {
+  padding: $spacer-l $spacer-xl;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: $spacer-s;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  .content__main {
+    border: 1px solid var(--primary);
+  }
+}
