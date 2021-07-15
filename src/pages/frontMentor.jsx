@@ -1,12 +1,14 @@
-import React from "react";
-import { MdAdd, MdKeyboardArrowDown } from "react-icons/md";
+import React, { useContext } from "react";
 import { IoBulb } from "react-icons/io5";
-import Card from "../components/Card";
-import { suggestionsData } from "../data/suggestions.data";
-import "./frontMentor.scss";
+import { MdAdd, MdKeyboardArrowDown } from "react-icons/md";
 import Button from "../components/Button";
+import Card from "../components/Card";
+import { SuggestionContext } from "../context/SuggestionContext";
+import "./frontMentor.scss";
 
 const FrontMentor = () => {
+  const [state] = useContext(SuggestionContext);
+
   return (
     <div className="frontMentor__main">
       <header>
@@ -14,7 +16,7 @@ const FrontMentor = () => {
           <div className="suggestion">
             <IoBulb />
             <p>
-              <b>6 Suggestions</b>
+              <b>{state.suggestions.length} Suggestions</b>
             </p>
           </div>
 
@@ -32,9 +34,15 @@ const FrontMentor = () => {
       </header>
 
       <section>
-        {suggestionsData.map((suggestion) => (
-          <Card data={suggestion} />
-        ))}
+        {state.suggestions
+          .filter((suggestions) =>
+            state.filter === "ALL"
+              ? suggestions
+              : suggestions.tag.toUpperCase() === state.filter
+          )
+          .map((suggestion) => (
+            <Card data={suggestion} key={suggestion.title} />
+          ))}
       </section>
     </div>
   );
