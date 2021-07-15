@@ -1,5 +1,55 @@
 @import "../styles/variables";
 
 .frontMentor__main {
-  padding: $spacer-xs;
+  padding: 0 $spacer-xs $spacer-xs;
+
+  header {
+    background-color: var(--primary-dark);
+    border-radius: $radius;
+    padding: $spacer-s $spacer-m;
+    margin-bottom: $spacer-s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // color: var(--paper-color);
+
+    .info__metrics {
+      display: flex;
+    }
+
+    .suggestion,
+    .sortBy {
+      display: flex;
+      color: var(--paper-color);
+      align-items: center;
+      margin-right: $spacer-m;
+
+      :first-child {
+        margin-right: $spacer-xs;
+      }
+    }
+
+    .suggestion {
+      svg,
+      p {
+        color: var(--paper-color);
+      }
+    }
+
+    .sortBy {
+      b {
+        display: flex;
+        align-items: center;
+
+        svg {
+          margin-left: $spacer-xs;
+          color: var(--paper-color);
+        }
+      }
+    }
+
+    .cta {
+      // flex-grow: 1;
+    }
+  }
 }
