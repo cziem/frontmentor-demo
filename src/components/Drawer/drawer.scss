@@ -1,14 +1,16 @@
 @import "../../styles/variables";
 
 .drawer__main {
-  // position: fixed;
-  // left: 0;
+  position: sticky;
+  top: 0;
+  height: 100vh;
 
   .top__board {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-start;
+    margin-top: $spacer-l;
     padding: $spacer-s;
     height: $spacer-xxl;
     border-radius: $radius;

@@ -4,6 +4,12 @@
   background-color: var(--paper-color);
   padding: $spacer-s $spacer-m;
   border-radius: $radius;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: var(--bng-color);
+    box-shadow: $shadow;
+  }
 
   &:not(:last-child) {
     margin-bottom: $spacer-s;

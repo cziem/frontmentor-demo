@@ -1,14 +1,13 @@
 @import "../../styles/variables";
 
 .layout__main {
-  padding: $spacer-l $spacer-xl;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 280px 1fr;
   grid-gap: $spacer-s;
   max-width: 1440px;
-  margin: 0 auto;
 
   .content__main {
-    padding: 0 $spacer-xs $spacer-xs;
+    padding: $spacer-l $spacer-xs $spacer-xs;
   }
 }
