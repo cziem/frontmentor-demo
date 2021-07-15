@@ -11,7 +11,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    // color: var(--paper-color);
 
     .info__metrics {
       display: flex;
@@ -39,6 +38,7 @@
     .sortBy {
       b {
         display: flex;
+        cursor: pointer;
         align-items: center;
 
         svg {
@@ -46,10 +46,6 @@
           color: var(--paper-color);
         }
       }
-    }
-
-    .cta {
-      // flex-grow: 1;
     }
   }
 }
