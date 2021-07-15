@@ -3,7 +3,7 @@
 .layout__main {
   padding: $spacer-l $spacer-xl;
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 280px 1fr;
   grid-gap: $spacer-s;
   max-width: 1440px;
   margin: 0 auto;

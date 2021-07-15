@@ -5,6 +5,9 @@
   --primary-dark: #373e68;
   --secondary: #b17ef1;
   --text-color: #969a9d;
+  --gradient-bng: rgb(160, 192, 237);
+  --gradient: linear-gradient(90deg, #fc466ace 0%, #3f5efbb6 100%);
+  --success: #61dde2;
 }
 
 // SCSS Variables
@@ -13,3 +16,6 @@ $spacer-s: 1em;
 $spacer-m: 2em;
 $spacer-l: 4em;
 $spacer-xl: 6em;
+$spacer-xxl: 8em;
+
+$radius: 8px;

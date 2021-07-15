@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap");
+
 @import "./variables";
 
 * {
@@ -8,6 +10,7 @@
 
 body {
   background-color: var(--bng-color);
+  font-family: "Poppins", sans-serif;
 }
 
 p {
@@ -27,4 +30,8 @@ a,
 a:visited,
 a:focus {
   color: var(--primary);
+}
+
+li {
+  list-style: none;
 }
