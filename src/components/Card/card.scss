@@ -1,0 +1,61 @@
+@import "../../styles/variables";
+
+.card__main {
+  background-color: var(--paper-color);
+  padding: $spacer-s $spacer-m;
+  border-radius: $radius;
+
+  &:not(:last-child) {
+    margin-bottom: $spacer-s;
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $spacer-s;
+
+    aside {
+      display: flex;
+      align-items: center;
+
+      .upvote {
+        margin-right: $spacer-m;
+        background-color: var(--bng-color);
+        border-radius: $radius;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: $spacer-xxs $spacer-xs;
+      }
+      .suggestion {
+        display: flex;
+        flex-direction: column;
+
+        h4 {
+          font-weight: 500;
+        }
+        p {
+          font-weight: 300;
+        }
+      }
+    }
+
+    .comments {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      svg {
+        margin-right: $spacer-xs;
+      }
+      p {
+        font-weight: 600;
+      }
+    }
+  }
+
+  .footer {
+    width: max-content;
+  }
+}
