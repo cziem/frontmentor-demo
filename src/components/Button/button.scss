@@ -1,0 +1,21 @@
+@import "../../styles/variables";
+
+.btn__main {
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  padding: $spacer-s;
+  border-radius: $radius;
+  color: var(--paper-color);
+  text-transform: capitalize;
+  background-color: var(--secondary);
+
+  .btn__icon__text {
+    display: flex;
+    align-items: center;
+    svg {
+      margin-right: $spacer-xs;
+      color: var(--paper-color);
+    }
+  }
+}

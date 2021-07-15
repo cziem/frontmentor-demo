@@ -1,9 +1,10 @@
 import React from "react";
-import { MdKeyboardArrowDown } from "react-icons/md";
+import { MdAdd, MdKeyboardArrowDown } from "react-icons/md";
 import { IoBulb } from "react-icons/io5";
 import Card from "../components/Card";
 import { suggestionsData } from "../data/suggestions.data";
 import "./frontMentor.scss";
+import Button from "../components/Button";
 
 const FrontMentor = () => {
   return (
@@ -26,7 +27,7 @@ const FrontMentor = () => {
         </div>
 
         <div className="cta">
-          <button>add feedback</button>
+          <Button text="Add feedback" icon={<MdAdd />} />
         </div>
       </header>
 
