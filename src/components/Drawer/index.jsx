@@ -1,14 +1,13 @@
 import React, { useContext } from "react";
 import { SuggestionContext } from "../../context/SuggestionContext";
-import { chipsetData } from "../../data/chipset.data";
 import { roadmapData } from "../../data/roadmap.data";
 import Chips from "../Chips";
 import "./drawer.scss";
 
 const Drawer = () => {
   const [state, dispatch] = useContext(SuggestionContext);
+
   const handleTagClick = (tag) => {
-    console.log(tag, "tag");
     dispatch({ type: tag.toUpperCase() });
   };
 

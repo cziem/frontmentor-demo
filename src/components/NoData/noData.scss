@@ -1,0 +1,9 @@
+@import "../../styles/variables";
+
+.noData__main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: $spacer-l;
+}
