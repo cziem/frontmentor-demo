@@ -23,7 +23,7 @@ const FrontMentor = () => {
           <div className="suggestion">
             <IoBulb />
             <p>
-              <b>{state.suggestions.length} Suggestions</b>
+              <b>{filteredSuggestions.length} Suggestions</b>
             </p>
           </div>
 
