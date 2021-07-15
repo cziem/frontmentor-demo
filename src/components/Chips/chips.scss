@@ -1,0 +1,23 @@
+@import "../../styles/variables";
+
+.chips__main {
+  margin-right: $spacer-xs;
+  margin-bottom: $spacer-xs;
+  background-color: var(--bng-color);
+  padding: $spacer-xxs $spacer-s;
+  border-radius: $radius;
+  cursor: pointer;
+
+  p {
+    color: var(--primary);
+    text-transform: capitalize;
+  }
+}
+
+.active {
+  background-color: var(--primary);
+
+  p {
+    color: var(--bng-color);
+  }
+}

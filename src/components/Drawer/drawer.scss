@@ -25,6 +25,7 @@
     padding: $spacer-s;
     border-radius: $radius;
     margin-bottom: $spacer-s;
+    flex-wrap: wrap;
   }
 
   .roadmap {
@@ -49,6 +50,11 @@
         display: flex;
         justify-content: space-between;
         text-transform: capitalize;
+        cursor: pointer;
+
+        &:not(:first-child) {
+          margin-top: $spacer-xs;
+        }
 
         .roadmap__info {
           display: flex;

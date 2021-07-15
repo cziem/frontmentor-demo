@@ -1,6 +1,7 @@
 import React from "react";
 import { chipsetData } from "../../data/chipset.data";
 import { roadmapData } from "../../data/roadmap.data";
+import Chips from "../Chips";
 import "./drawer.scss";
 
 const Drawer = () => {
@@ -12,7 +13,11 @@ const Drawer = () => {
       </div>
       <div className="tags">
         {chipsetData.map((chipset) => (
-          <p>{chipset.name}</p>
+          <Chips
+            text={chipset.name}
+            active={chipset.active}
+            key={chipset.name}
+          />
         ))}
       </div>
       <div className="roadmap">
@@ -23,7 +28,7 @@ const Drawer = () => {
 
         <ul className="roadmap__list">
           {roadmapData.map((roadmap) => (
-            <li className="list__item">
+            <li className="list__item" key={roadmap.text}>
               <div className="roadmap__info">
                 <span className={`indicator ${roadmap.text}`} />
                 <p>{roadmap.text}</p>
