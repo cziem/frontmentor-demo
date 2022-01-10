@@ -1,10 +1,11 @@
-import React from "react";
-import Chips from "../Chips";
-import { FaComment } from "react-icons/fa";
-import { MdKeyboardArrowUp } from "react-icons/md";
-import "./card.scss";
+import React from "react"
+import { FaComment } from "react-icons/fa"
+import { MdKeyboardArrowUp } from "react-icons/md"
+import "./card.scss"
+import { TSuggestion } from "../../types/type"
+import Chips from "../Chips"
 
-const Card = ({ data }) => {
+const Card = (data: TSuggestion) => {
   return (
     <div className="card__main">
       <div className="content">
@@ -27,7 +28,7 @@ const Card = ({ data }) => {
         <Chips text={data.tag} />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Card;
+export default Card
