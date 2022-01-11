@@ -35,7 +35,11 @@ const FrontMentor = () => {
         </div>
 
         <div className="cta">
-          <Button text="Add feedback" icon={<MdAdd />} handleClick={() => {}} />
+          <Button
+            text="Add feedback"
+            icon={<MdAdd />}
+            handleClick={() => null}
+          />
         </div>
       </header>
 
