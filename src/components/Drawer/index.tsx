@@ -1,15 +1,15 @@
 import React, { useContext } from "react"
 import { SuggestionContext } from "../../context/SuggestionContext"
 import { roadMapData } from "../../data/roadmap.data"
-import { TState } from "../../types/type"
 import Chips from "../Chips"
 import "./drawer.scss"
 
 const Drawer = () => {
-  const { chipset } = useContext(SuggestionContext) as TState
+  const { state, dispatch } = useContext(SuggestionContext)
+  const { chipset } = state
 
   const handleTagClick = (tag: string) => {
-    // dispatch({ type: tag.toUpperCase() })
+    dispatch({ type: tag.toUpperCase() })
   }
 
   return (

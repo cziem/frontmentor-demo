@@ -1,3 +1,8 @@
+export type TContext = {
+  state: TState
+  dispatch: React.Dispatch<any>
+}
+
 export type TChipSet = {
   name: string
   active: boolean
@@ -19,7 +24,7 @@ export type TSuggestion = {
 export type TState = {
   suggestions: TSuggestion[]
   chipset: TChipSet[]
-  filter: sting
+  filter: string
 }
 
 export type TAction = {

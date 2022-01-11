@@ -8,14 +8,11 @@ import { SuggestionContext } from "../context/SuggestionContext"
 import "./frontMentor.scss"
 
 const FrontMentor = () => {
-  const state = useContext(SuggestionContext)
+  const { state } = useContext(SuggestionContext)
+  const { suggestions, filter } = state
 
-  console.log(state, "state")
-
-  const filteredSuggestions = state.suggestions.filter((suggestions) =>
-    state.filter === "ALL"
-      ? suggestions
-      : suggestions.tag.toUpperCase() === state.filter
+  const filteredSuggestions = suggestions.filter((suggestions) =>
+    filter === "ALL" ? suggestions : suggestions.tag.toUpperCase() === filter
   )
 
   return (

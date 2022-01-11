@@ -1,7 +1,7 @@
 import { createContext } from "react"
 import { chipSetData } from "../data/chipset.data"
 import { suggestionsData } from "../data/suggestions.data"
-import { TAction, TState } from "../types/type"
+import { TAction, TContext, TState } from "../types/type"
 
 export const initialState: TState = {
   suggestions: suggestionsData,
@@ -9,7 +9,10 @@ export const initialState: TState = {
   filter: "ALL",
 }
 
-export const SuggestionContext = createContext(initialState)
+export const SuggestionContext = createContext<TContext>({
+  state: initialState,
+  dispatch: () => null,
+})
 
 export const suggestionReducer = (
   state = initialState,
