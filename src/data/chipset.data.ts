@@ -1,4 +1,6 @@
-export const chipsetData = [
+import { TChipSet } from "../types/type"
+
+export const chipSetData: TChipSet[] = [
   {
     name: "all",
     active: true,
@@ -23,4 +25,4 @@ export const chipsetData = [
     name: "Feature",
     active: false,
   },
-];
+]

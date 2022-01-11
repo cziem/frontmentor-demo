@@ -1,15 +1,16 @@
-import React, { useContext } from "react";
-import { SuggestionContext } from "../../context/SuggestionContext";
-import { roadmapData } from "../../data/roadmap.data";
-import Chips from "../Chips";
-import "./drawer.scss";
+import React, { useContext } from "react"
+import { SuggestionContext } from "../../context/SuggestionContext"
+import { roadMapData } from "../../data/roadmap.data"
+import Chips from "../Chips"
+import "./drawer.scss"
 
 const Drawer = () => {
-  const [state, dispatch] = useContext(SuggestionContext);
+  const { state, dispatch } = useContext(SuggestionContext)
+  const { chipset } = state
 
-  const handleTagClick = (tag) => {
-    dispatch({ type: tag.toUpperCase() });
-  };
+  const handleTagClick = (tag: string) => {
+    dispatch({ type: tag.toUpperCase() })
+  }
 
   return (
     <div className="drawer__main">
@@ -18,7 +19,7 @@ const Drawer = () => {
         <small className="role">Feedback Board</small>
       </div>
       <div className="tags">
-        {state.chipset.map((chipset) => (
+        {chipset.map((chipset) => (
           <Chips
             text={chipset.name}
             active={chipset.active}
@@ -34,7 +35,7 @@ const Drawer = () => {
         </header>
 
         <ul className="roadmap__list">
-          {roadmapData.map((roadmap) => (
+          {roadMapData.map((roadmap) => (
             <li className="list__item" key={roadmap.text}>
               <div className="roadmap__info">
                 <span className={`indicator ${roadmap.text}`} />
@@ -46,7 +47,7 @@ const Drawer = () => {
         </ul>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Drawer;
+export default Drawer

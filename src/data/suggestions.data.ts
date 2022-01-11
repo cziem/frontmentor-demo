@@ -1,4 +1,6 @@
-export const suggestionsData = [
+import { TSuggestion } from "../types/type"
+
+export const suggestionsData: TSuggestion[] = [
   {
     upvote: 112,
     title: "Add tags for solutions",
@@ -41,4 +43,4 @@ export const suggestionsData = [
     tag: "Bug",
     comments: 0,
   },
-];
+]

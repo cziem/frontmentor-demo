@@ -1,4 +1,6 @@
-export const roadmapData = [
+import { TRoadMap } from "../types/type";
+
+export const roadMapData: TRoadMap[] = [
   {
     text: "planned",
     count: 2,
@@ -11,4 +13,4 @@ export const roadmapData = [
     text: "live",
     count: 1,
   },
-];
+]
