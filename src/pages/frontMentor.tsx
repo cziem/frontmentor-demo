@@ -1,20 +1,22 @@
-import React, { useContext } from "react";
-import { IoBulb } from "react-icons/io5";
-import { MdAdd, MdKeyboardArrowDown } from "react-icons/md";
-import Button from "../components/Button";
-import Card from "../components/Card";
-import NoData from "../components/NoData";
-import { SuggestionContext } from "../context/SuggestionContext";
-import "./frontMentor.scss";
+import React, { useContext } from "react"
+import { IoBulb } from "react-icons/io5"
+import { MdAdd, MdKeyboardArrowDown } from "react-icons/md"
+import Button from "../components/Button"
+import Card from "../components/Card"
+import NoData from "../components/NoData"
+import { SuggestionContext } from "../context/SuggestionContext"
+import "./frontMentor.scss"
 
 const FrontMentor = () => {
-  const [state] = useContext(SuggestionContext);
+  const state = useContext(SuggestionContext)
+
+  console.log(state, "state")
 
   const filteredSuggestions = state.suggestions.filter((suggestions) =>
     state.filter === "ALL"
       ? suggestions
       : suggestions.tag.toUpperCase() === state.filter
-  );
+  )
 
   return (
     <div className="frontMentor__main">
@@ -36,21 +38,23 @@ const FrontMentor = () => {
         </div>
 
         <div className="cta">
-          <Button text="Add feedback" icon={<MdAdd />} />
+          <Button text="Add feedback" icon={<MdAdd />} handleClick={() => {}} />
         </div>
       </header>
 
       <section>
         {!!filteredSuggestions.length ? (
           filteredSuggestions.map((suggestion) => (
-            <Card data={suggestion} key={suggestion.title} />
+            <React.Fragment key={suggestion.title}>
+              <Card {...suggestion} />
+            </React.Fragment>
           ))
         ) : (
           <NoData message="No results found!" />
         )}
       </section>
     </div>
-  );
-};
+  )
+}
 
-export default FrontMentor;
+export default FrontMentor

@@ -9,11 +9,11 @@ import FrontMentor from "./pages/frontMentor"
 import "./styles/main.scss"
 
 function App() {
-  const stateAndDispatch = useReducer(suggestionReducer, initialState)
+  const [state] = useReducer(suggestionReducer, initialState)
   // const [state, dispatch] = useReducer(suggestionReducer, initialState)
 
   return (
-    <SuggestionContext.Provider value={stateAndDispatch}>
+    <SuggestionContext.Provider value={state}>
       <Layout>
         <FrontMentor />
       </Layout>
