@@ -1,7 +1,7 @@
 import { createContext } from "react"
 import { chipSetData } from "../data/chipset.data"
 import { suggestionsData } from "../data/suggestions.data"
-import { IContextProps, TAction, TState } from "../types/type"
+import { TAction, TState } from "../types/type"
 
 export const initialState: TState = {
   suggestions: suggestionsData,
